@@ -1,9 +1,8 @@
 const { sign, verify} = require('jsonwebtoken')
 
-const createToken = (user) => {
-    const accessToken = sign({ username: user.username, id: user.userId }, "jwtsecretpolo", {//payload claims and secret
-        
-    });
+const createToken = (users) => {
+    const accessToken = sign({ username: users.username, Id: users.uId }, 
+        "jwtsecretpolo" );
     
     return accessToken;
 }
